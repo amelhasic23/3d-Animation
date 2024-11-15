@@ -1,0 +1,59 @@
+.first {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 80px 50px;
+    background-color: rgba(246, 132, 122, 0.6);
+    transform: rotate(61deg) translate(-335px, 78px) scale(0.3);
+    z-index: 1;
+}
+.second {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    margin: 80px 50px;
+    background-color: rgb(211, 213, 214);
+    transform: translate(335px, -217px) skewX(-50deg);
+    z-index: 2;
+    animation-name: my-animation;
+    animation-duration: 5s;
+    animation-iteration-count: 5;
+    transition-timing-function: cubic-bezier(1, -0.02, 0.19, 1.29);
+    transition-delay: 0.5s;
+}
+@keyframes my-animation {
+    0% {
+        background-color: rgb(96, 98, 98);
+        transform: translate(335px, -217px) skewX(-50deg);
+    }
+    25% {
+        background-color: rgb(244, 245, 199);
+        transform: translate(335px, -623px) skew(-50deg);
+    }
+    50% {
+        background-color: rgb(250, 208, 244);
+        transform: translate(725px, -623px) skew(-50deg);
+    }
+    75% {
+        background-color: rgb(218, 247, 227);
+        transform: translate(725px, -217px) skew(-50deg);
+    }
+    100% {
+        background-color: rgb(173, 184, 189);
+        transform: translate(335px, -217px) skew(-50deg);
+    }
+}
+.third {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: -255px 76px;
+    background-color: rgb(159, 141, 187);
+    border: 10px solid rgb(207, 205, 205);
+    transform: translate(190px, 625px) rotate(78deg) skew(20deg, 20deg);
+    z-index: 3;
+}
+.third:hover {
+    border: none;
+    box-shadow: 8px 8px 8px 8px rgb(103, 68, 158);
+}
